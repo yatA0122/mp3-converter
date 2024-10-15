@@ -46,7 +46,7 @@ document.getElementById('convert').addEventListener('click', async () => {
 
 function convertToMP3(inputData) {
     return new Promise((resolve, reject) => {
-        var ffmpeg = new Worker('./ffmpeg-worker-mp4.js');
+        var ffmpeg = new Worker('https://cdn.jsdelivr.net/npm/ffmpeg.js/ffmpeg-worker-mp4.js');
         
         ffmpeg.onmessage = function(e) {
             var msg = e.data;
