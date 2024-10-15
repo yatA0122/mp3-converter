@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MP3 Converter</h1>
+    
+    <label for="uploader">ファイルを選択</label>
+    <input type="file" id="uploader" accept="audio/*">
+    <p id="fileName" style="margin-top: 10px; font-weight: bold;"></p>
+    
+    <button id="convert">Convert to MP3</button>
+    <p id="errorMessage" style="color: red; display: none;"></p>
+
+    <br><br>
+    <a id="downloadLink" style="display:none">Download MP3</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/ffmpeg.js@0.9.9/ffmpeg.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
